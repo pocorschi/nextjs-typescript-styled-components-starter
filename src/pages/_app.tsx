@@ -1,6 +1,7 @@
 import * as React from 'react'
 import NextApp from 'next/app'
 import { DefaultSeo } from 'next-seo'
+import 'modern-normalize'
 
 class App extends NextApp {
   static async getInitialProps({ Component, ctx }) {
