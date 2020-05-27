@@ -35,7 +35,7 @@ module.exports = {
 	rules: {
 		// @typescript-eslint
 		'@typescript-eslint/explicit-function-return-type': 'off',
-		'@typescript-eslint/indent': ['error', 'tab', {
+		'@typescript-eslint/indent': ['error', 2, {
 			MemberExpression: 0,
 			SwitchCase: 1
 		}],
@@ -48,10 +48,23 @@ module.exports = {
 			caughtErrorsIgnorePattern: '^_'
 		}],
 		'@typescript-eslint/restrict-plus-operands': 'off',
-
+		'@typescript-eslint/semi': 'off',
+		'@typescript-eslint/member-delimiter-style': [
+			2,
+			{
+				multiline: {
+					delimiter: 'none',
+					requireLast: false,
+				},
+				singleline: {
+					delimiter: 'semi',
+					requireLast: true,
+				},
+			},
+		],
 		// react
 		'react/jsx-max-props-per-line': ['error', { maximum: 1, when: 'multiline' }],
-
+		"react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }],
 		// Core
 		'arrow-parens': 'off',
 		'capitalized-comments': 'off',
